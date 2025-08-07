@@ -16,7 +16,7 @@ RUN npm install
 COPY . .
 # 구성한 node_modules 기반으로 build 진행
 # 여기서 dist 폴더에 빌드 정보가 들어감
-RUN npm run build
+RUN npm run build  # or rspack build, depending on your setup
 
 # 경량형 nginx 구성
 FROM nginx:alpine
