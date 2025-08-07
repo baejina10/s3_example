@@ -41,7 +41,7 @@ jobs:
           sudo docker-compose down
 
           echo "${{ secrets.GHCR_TOKEN }}" | sudo docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          sudo docker pull ${{ env.DOCKER_IMAG }}
+          sudo docker pull ${{ env.DOCKER_IMAGE }}
 
           sudo docker image prune -f
           sudo docker logout
